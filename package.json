@@ -1,0 +1,27 @@
+{
+  "name": "angulard3display",
+  "version": "1.0.0",
+  "description": "See comparison of various data using D3",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agee6/angularD3.git"
+  },
+  "keywords": [
+    "d3",
+    "angular",
+    "likes"
+  ],
+  "author": "AGee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/agee6/angularD3/issues"
+  },
+  "homepage": "https://github.com/agee6/angularD3#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}

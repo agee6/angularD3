@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- define our angular app and set the controller -->
+<html ng-app="dataDisplay" ng-controller="dataController">
+  <head>
+    <title>Like Data Display</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- stylesheets -->
+    <link href="http://netdna.bootstrapcdn.com/bootswatch/3.1.1/yeti/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.1/nv.d3.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+
+  </head>
+  <body>
+    <div class="jumbotron">
+        <h1>FaceBook Like Display</h1>
+          <br><br>
+          <button class="btn btn-primary" ng-click=changeSM()>Show {{notShowing}}</button>
+          <h3>Select what data you would like to display<h3>
+          <select ng-model="currentData" ng-change="updateDisplay()">
+            <option ng-repeat="(key, val) in allData">{{key}}</option>
+          </select>
+          <select ng-model="currentGraph" ng-change="changeGraphs()">
+            <option ng-repeat="val in graphOptions">{{val}}</option>
+          </select>
+      <div class="chart-area">
+        <div  id="chart">
+          <nvd3
+            type="discreteBarChart"
+            data="bitcoinHistoricalData"
+            height="350"
+            showXAxis="true"
+            showYAxis="true"
+            isArea="true"
+            useInteractiveGuideLine="true">
+          <svg style="height:500px" width="90%"></svg>
+        </div>
+      </div>
+    </div>
+    <!-- scripts -->
+    <script type="text/javascript" src=allData.js></script>
+    <script type="text/javascript" src="prices.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.10/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.1/nv.d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-nvd3-directives/0.0.7/angularjs-nvd3-directives.min.js"></script>
+
+    <!-- angular module -->
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="bitcoinClicker">
+  <head>
+    <meta charset="utf-8">
+    <title>BitClick</title>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.10/angular.min.js"></script>
+    <link rel="stylesheet" href="style.css" media="screen" title="no title">
+  </head>
+  <body>
+    <div ng-controller="bitClickController">
+      <label for="bitcoins-owned">How many bitcoins do you have?</label><br>
+      <input type="number" name="bitcoins-owned" ng-model="numberOfBitcoins">
+      <br>
+      <p>You have twice as many bitcoins as bob bas has: <span>{{ bobsBitcoins() }}</span> bitcoins</p>
+
+      <div id="click-place" ng-click="addCick()">CLICK MEEEE!!! <img id="bit-image" ng-click="addClick()" src="btc.png" width="200"/> </div><br>
+      <p>you have clicked <span>{{numberOfClicks}}</span> times</p>
+      <p>The Image will reapper in: <span id='time-span'> 0 </span> seconds</p>
+
+
+    </div>
+    <script type="text/javascript" src="mainClick.js"></script>
+
+  </body>
+</html>
