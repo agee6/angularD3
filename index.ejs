@@ -14,9 +14,8 @@
   </head>
   <body>
     <div class="jumbotron">
-        <h1>FaceBook Like Display</h1>
+        <h1>Social Media Popularity</h1>
           <br><br>
-          <button class="btn btn-primary" ng-click=changeSM()>Show {{notShowing}}</button>
           <h3>Select what data you would like to display<h3>
           <select ng-model="currentData" ng-change="updateDisplay()">
             <option ng-repeat="(key, val) in allData">{{key}}</option>
@@ -24,6 +23,18 @@
           <select ng-model="currentGraph" ng-change="changeGraphs()">
             <option ng-repeat="val in graphOptions">{{val}}</option>
           </select>
+          <div class="radio-button-area">
+              <label class="radios">
+                  <input type="radio" name="socialMedia" value="facebook" selected=true ng-model="formData" ng-click="changeSM()">
+                  facebook
+              </label>
+              <label class="radios">
+                  <input type="radio" name="socialMedia" value="twitter" ng-model="formData" ng-click="changeSM()">
+                  twitter
+              </label>
+          </div>
+
+
       <div class="chart-area">
         <div  id="chart">
           <nvd3

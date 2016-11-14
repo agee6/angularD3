@@ -6,6 +6,8 @@
       $scope.allData=allData;
       $scope.currentSM='facebook';
       $scope.notShowing='twitter';
+      $scope.formData = {facebook: "facebook", twitter: "twitter"};
+      $scope.formData = 'facebook'; 
       $scope.changeSM = function(){
         if($scope.currentSM === 'facebook'){
           $scope.currentSM = 'twitter';
@@ -20,7 +22,7 @@
       $scope.currentGraph = 'bar';
       $scope.changeGraphs = function(){
         d3.selectAll("svg > *").remove();
-        $scope.updateDisplay(); 
+        $scope.updateDisplay();
       }
 
       $scope.updateDisplay = function(){
@@ -32,7 +34,7 @@
         }
 
       };
-      $scope.currentData = "boyBands";
+      $scope.currentData = "Boy_Bands";
       $scope.updateDisplay();
 
     });

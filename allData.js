@@ -1,6 +1,6 @@
 var allData = {
 
-  boyBands: {
+  Boy_Bands: {
     hasTwitter: true,
     facebook: {
       "*NSync":1157553,
@@ -13,7 +13,7 @@ var allData = {
       "Backstreet Boys":887543
     }
   },
-  presidentialCandidates: {
+  Presidential_Candidates: {
     hasTwitter: true,
     facebook: {
       "Donald Trump":14582520,
@@ -32,7 +32,7 @@ var allData = {
       "Vermin Supreme":15591
     }
   },
-  carBrands:{
+  Car_Brands:{
     hasTwitter: true,
     facebook: {
       Toyota:3016454,

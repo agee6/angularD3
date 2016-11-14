@@ -4,7 +4,8 @@
   "description": "See comparison of various data using D3",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
   },
   "homepage": "https://github.com/agee6/angularD3#readme",
   "dependencies": {
+    "ejs": "^2.5.2",
     "express": "^4.14.0"
   }
 }
